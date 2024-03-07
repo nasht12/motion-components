@@ -1,6 +1,5 @@
 "use client"
 import { motion, useScroll, useSpring } from "framer-motion";
-import "./globals.css";
 import { LoremIpsum } from "@/components/loremipsum";
 
 
@@ -14,7 +13,11 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Hello
+      <motion.div
+        className="fixed top-0 left-0 right-0 h-2.5 bg-red-500 origin-left"
+        style={{ scaleX }}
+      />
+      <LoremIpsum />
     </main>
   );
 }
